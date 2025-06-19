@@ -33,6 +33,11 @@ public class UserController {
         return userService.lire();
     }
 
+    @GetMapping("/read/{id}")
+    public User read(@PathVariable Integer id) {
+        return userService.trouver(id);
+    }
+
     @PutMapping("/update/{id}")
     public User update(@PathVariable Integer id,@RequestBody User user) {
         return userService.modifier(id, user);

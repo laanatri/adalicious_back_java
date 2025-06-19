@@ -23,6 +23,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User trouver(Integer id) {
+        return userRepository.findById(id).orElse(null);
+    }
+
+    @Override
     public User modifier(Integer id, User user) {
         return userRepository.findById(id)
         .map(u-> {

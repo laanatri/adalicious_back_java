@@ -9,10 +9,10 @@ public interface UserService {
 
     List<User> lire();
 
+    User trouver(Integer id);
+
     User modifier(Integer id, User user);
 
     String supprimer(Integer id);
-
-
 
 }
